@@ -1,0 +1,20 @@
+<div>
+  <h2>Image</h2>
+  <img height="200" width="200" [src]="imageUrl.url"/>
+  <br>
+  <h2>Image information</h2>
+  <div>
+    <label>Image name</label>
+    <input type="text" name="name" [(ngModel)]="imageName"><br>
+    <label>X</label>
+    <input type="number" name="x" [(ngModel)]="dimensions.X"><br>
+    <label>Y</label>
+    <input type="number" name="y" [(ngModel)]="dimensions.Y"><br>
+    <label>Width</label>
+    <input type="number" name="widht" [(ngModel)]="dimensions.Width"><br>
+    <label>Height</label>
+    <input type="number" name="height" [(ngModel)]="dimensions.Height">
+    <br>
+    <button (click)="generateImage()">Generar Imagen</button>
+  </div>
+</div>
