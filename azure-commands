@@ -1,0 +1,24 @@
+1. Create resource group 
+* az group create -n "rgimagecreator" -l EastUS2
+* New-AzResourceGroup -Name "rgimagecreator" -Location "EastUS2"
+
+2. Create storage account
+* az storage account create -n "staimagecreator" -l EastUS2 -g "rgimagecreator"
+* New-AzStorageAccount -Name "staimagecreator" -ResourceGroup "rgimagecreator" -Location "EastUS2" -SkuName "Standard_LRS"
+
+3. Get connection string
+* az storage account show-connection-string -n "staimagecreator" -g "rgimagecreator"
+* (Get-AzStorageAccount -Name "staimagecreator" -ResourceGroup "rgimagecreator").Context.ConnectionString
+
+4. Create blob container
+* az storage container create -n "ctimagecreator" --account-name "staimagecreator"
+*   $context = (Get-AzStorageAccount -Name "staimagecreator" -ResourceGroup "rgimagecreator").Context 
+    New-AzStorageContainer -Name "ctimagecreator" -Context $context -Permission Blob
+
+5. Create App Service Plan
+* az appservice plan create -n aspimagecreator --sku S1 -g rgiamgecreator -l EastUS2
+* New-AzAppServicePlan -Name "aspimagecreator" -Tier "S1" -ResourceGroup "rgimagecreator" -Location "EastUS2"
+
+6. Create WebApp
+* az webapp create -g rgiamgecreator -n wapimagecreator --plan aspimagecreator 
+* New-AzWebApp -Name "wapimagecreator" -ResourceGroup "rgimagecreator" -AppServicePlan "aspimagecreator"
