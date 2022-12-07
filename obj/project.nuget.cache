@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N/TX0x79UvZkfmduZRTY9uhNdd6UKpfTYGPPngVve9nJz22N76j3OSP8veewdp8lhh5+ynznPb51QujZ3e+GoA==",
+  "dgSpecHash": "kyww3KD1sa4sZOAA5QC73eP6LfROMdeHdOPwqpo8vPykuOXGmtKP+JMUNmrOh2fGPXePVAyYU5imUsS8ttHnoA==",
   "success": true,
-  "projectFilePath": "/home/gbanguera/az204/appservice/azwebapptest/azwebapptest.csproj",
+  "projectFilePath": "/home/gbanguera/az204/appservice/azwebapptest.csproj",
   "expectedPackageFiles": [
     "/home/gbanguera/.nuget/packages/aspose.drawing/22.10.0/aspose.drawing.22.10.0.nupkg.sha512",
     "/home/gbanguera/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",

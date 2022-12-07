@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/gbanguera/az204/appservice/azwebapptest/azwebapptest.csproj": {}
+    "/home/gbanguera/az204/appservice/azwebapptest.csproj": {}
   },
   "projects": {
-    "/home/gbanguera/az204/appservice/azwebapptest/azwebapptest.csproj": {
+    "/home/gbanguera/az204/appservice/azwebapptest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/gbanguera/az204/appservice/azwebapptest/azwebapptest.csproj",
+        "projectUniqueName": "/home/gbanguera/az204/appservice/azwebapptest.csproj",
         "projectName": "azwebapptest",
-        "projectPath": "/home/gbanguera/az204/appservice/azwebapptest/azwebapptest.csproj",
+        "projectPath": "/home/gbanguera/az204/appservice/azwebapptest.csproj",
         "packagesPath": "/home/gbanguera/.nuget/packages/",
-        "outputPath": "/home/gbanguera/az204/appservice/azwebapptest/obj/",
+        "outputPath": "/home/gbanguera/az204/appservice/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/gbanguera/.nuget/NuGet/NuGet.Config"

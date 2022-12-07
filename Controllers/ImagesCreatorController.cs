@@ -23,11 +23,19 @@ public class ImagesCreatorController : ControllerBase
     [HttpPost("{imageName}", Name = "CreateImageFromText")]
     public async Task<IActionResult> Post(string imageName, [FromBody] EllipseDimensions dimensions)
     {
-        var bitmapStream = ImageCreator.Logic.ImageCreator.Create(dimensions);
-        var containerClient = _blobService.GetBlobContainerClient(_configuration["Values:BlobStorageConnectionString"],_configuration["Values:ImageContainerName"]);
+        try{
+            var bitmapStream = ImageCreator.Logic.ImageCreator.Create(dimensions);
+            var containerClient = _blobService.GetBlobContainerClient(_configuration["Values:BlobStorageConnectionString"],_configuration["Values:ImageContainerName"]);
 
-        var uri = await _blobService.UploadStream(containerClient, bitmapStream, $"{imageName}.jpg");
+            var uri = await _blobService.UploadStream(containerClient, bitmapStream, $"{imageName}.jpg");
 
-        return Ok(new { url = uri.AbsoluteUri });
+            return Ok(new { url = uri.AbsoluteUri });
+        }
+        catch(Exception e){
+            return BadRequest(e.Message);
+        }
     }
+
+    [HttpGet("test")]
+    public string Test() => "Hello, test";
 }
