@@ -38,4 +38,7 @@ public class ImagesCreatorController : ControllerBase
 
     [HttpGet("test")]
     public string Test() => "Hello, test";
+
+    [HttpGet("sum")]
+    public int TestSlot(int num1, int num2) => num1+num2;
 }
