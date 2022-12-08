@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'wapimagecreator'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_73942BE9B79E481DB3E9A20772754C87 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B487073EEE7B468B99C5A4F39A4E0BAC }}
           package: .
